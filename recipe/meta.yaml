@@ -1,5 +1,5 @@
 {% set name = "semi-ate-apps-common" %}
-{% set version = "1.0.9" %}
+{% set version = "1.0.10" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/semi-ate-apps-common-{{ version }}.tar.gz
-  sha256: cf67ba3dba0fd638ba8f8031f4a4bfe15e559d5102e36a223edbf56383f12c32
+  sha256: c0d487b722f63134ee7b2eb6e3d2a70a2e4ece31e717206058cefff5928326db
 
 build:
   number: 0
