@@ -11,17 +11,17 @@ source:
   sha256: 5a7fae7dd6667f10239a848ad95ce22cf8d7c554f106084d519ef2f60c00a1ab
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
   run:
     - aiomqtt
-    - python >=3.8
+    - python >={{ python_min }}
     - semi-ate-common
     - semi-ate-stdf
 
@@ -33,6 +33,7 @@ test:
   requires:
     - pip
 
+    - python {{ python_min }}
 about:
   home: https://pypi.org/project/semi-ate-apps-common/
   summary: Shared helpers used by the different ate-apps, i.e. master-app, control-app, etc.)
